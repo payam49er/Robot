@@ -5,17 +5,14 @@ namespace CintRobot
 {
     public class Robot : IRobot
     {
-        private int CommandCount { get; set; }
-
         private List<Tuple<string, int>> Directions { get; set; }
 
         private readonly HashSet<Tuple<int,int>>  UniqueCleanedSpots = new HashSet<Tuple<int, int>>();
 
         private readonly int[] NewSpot = new int[2];
 
-        public Robot(int commandCount, int[] initialCoordinates, List<Tuple<string, int>> directions)
+        public Robot(int[] initialCoordinates, List<Tuple<string, int>> directions)
         {
-            this.CommandCount = commandCount;
             this.Directions = directions;
             this.NewSpot = initialCoordinates;
             this.UniqueCleanedSpots.Add(new Tuple<int, int>(initialCoordinates[0], initialCoordinates[1]));

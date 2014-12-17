@@ -56,7 +56,7 @@ namespace CintRobot
                 counter++;
             }
 
-            Robot cintRobot = new Robot(instructionsCount,coordinate,directionList);
+            Robot cintRobot = new Robot(coordinate,directionList);
 
             Robotics robotics = new Robotics(cintRobot);
 
